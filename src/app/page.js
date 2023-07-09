@@ -1,9 +1,7 @@
 "use client";
-import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { IoIosArrowUp } from "react-icons/Io";
-import { IoIosArrowDown } from "react-icons/Io";
+import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 import "./scrollbar.css";
 
 export default function Home() {
