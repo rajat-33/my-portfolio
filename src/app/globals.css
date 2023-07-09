@@ -17,11 +17,77 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+}
+
+.heading {
+  font-size: 3em;
+}
+
+.heading2 {
+  font-size: 1.2em;
+}
+
+.content {
+  font-size: 1.2em;
+}
+
+.content2 {
+  font-size: 0.8em;
+}
+
+.imgContainer {
+  background-image: url("../../assets/profilePicture.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.gfgContainer {
+  background-image: url("https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"); /* The image used */
+  background-color: #000000; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.codechefContainer {
+  background-image: url("https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/zruiknbedz8yqafxbazb"); /* The image used */
+  background-color: #ffffff; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.hackerrankContainer {
+  background-image: url("https://hrcdn.net/fcore/assets/work/header/hackerrank_logo-21e2867566.svg"); /* The image used */
+  background-color: ; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.linkedinContainer {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"); /* The image used */
+  background-color: ; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.gmailContainer {
+  background-image: url("https://1000logos.net/wp-content/uploads/2021/05/Gmail-logo.png"); /* The image used */
+  background-color: ; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.githubContainer {
+  background-image: url("https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png"); /* The image used */
+  background-color: ; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
