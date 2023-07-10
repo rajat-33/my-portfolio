@@ -2,6 +2,7 @@
 import { useRef, useState, useEffect } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
+import { BsLink45Deg } from "react-icons/bs";
 import "./scrollbar.css";
 
 export default function Home() {
@@ -12,8 +13,7 @@ export default function Home() {
   const experienceHeading = "<Experience />";
   const aboutMeContent =
     "I'm an enthusiastic learner, dedicated coder, and proficient full stack MERN developer. My expertise lies in crafting code logics to solve complex problems. I have to contributed to and helped built some  high quality React.js projects, showcasing a commitment to excellence. During my internship, I made substantial contributions to the front-end development of a web application, amplifying its user experience. Beyond my mastery in MERN, I possess valuable experience in NEXT.js, TypeScript, Machine Learning, and actively engage in competitive programming. With a track record of solving over 1500+ problems on coding platforms like GeeksForGeeks, Codechef, and HackerRank, I continually refine my problem-solving skills.";
-  const CollegeContent =
-    "I'm a learner and a full stack MERN developer with some experince in working on good projects. . I'm efficient in writing code logics to solve problems. I have an internship experience where I used NEXT.JS to contribute in building the web-application. Apart from MERN I also have development experience in NEXT, TypeScript, Machine Learning and practice competitive programming. Check out some of my cp profiles here";
+
   const animationArray = [
     ".",
     ".j",
@@ -207,32 +207,44 @@ export default function Home() {
             <div className="w-full lg:w-2/3 flex justify-around py-4">
               <a
                 href="mailto:agarwalrajat1503@gmail.com"
+                target="_blank"
+                alt="Gmail"
                 className="gmailContainer w-8 h-8 rounded-sm flex justify-center items-center"
+                title="Gmail"
               ></a>
               <a
                 href="https://www.linkedin.com/in/rajat-agarwal-04b6b4194/"
                 target="_blank"
                 className="linkedinContainer w-8 h-8 rounded-sm flex justify-center items-center"
+                title="LinkedIn"
               ></a>
               <a
                 href="https://github.com/rajat-33"
                 target="_blank"
+                alt="Github"
                 className="githubContainer w-8 h-8 rounded-sm flex justify-center items-center"
+                title="Github"
               ></a>
               <a
                 href="https://auth.geeksforgeeks.org/user/rajat1503/practice"
                 target="_blank"
+                alt="GeeksForGeeks"
                 className="gfgContainer w-8 h-8 rounded-sm flex justify-center items-center"
+                title="GeeksForGeeks"
               ></a>
               <a
                 href="https://www.hackerrank.com/rajat_1503?hr_r=1"
                 target="_blank"
+                alt="HackerRank"
                 className="hackerrankContainer w-8 h-8 rounded-sm flex justify-center items-center"
+                title="HackerRank"
               ></a>
               <a
                 href="https://www.codechef.com/users/rajat_1503"
                 target="_blank"
+                alt="CodeChef"
                 className="codechefContainer w-8 h-8 rounded-sm flex justify-center items-center"
+                title="CodeChef"
               ></a>
             </div>
           </div>
@@ -407,8 +419,16 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col text-md lg:text-xl w-full px-4">
                   <div className="">
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      Emotion Detection Using Neural Learning
+                    <div className="flex items-center text-xl text-[#00FF15] font-semibold">
+                      Emotion Detection Using Neural Learning{" "}
+                      <a
+                        href="https://github.com/rajat-33/Speech-Emotion-Recogition-FinalYearProject"
+                        target="_blank"
+                        className="ml-4 hover:text-[#0011FF]"
+                        title="Repository link"
+                      >
+                        <BsLink45Deg />
+                      </a>
                     </div>
                     <div className="text-md">
                       RNN | Keras | Sklearn | Pandas | Numpy | Librosa
@@ -425,7 +445,15 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="text-end mt-16">
-                    <div className="text-xl text-[#00FF15] font-semibold">
+                    <div className="text-xl flex items-center justify-end text-[#00FF15] font-semibold">
+                      <a
+                        href="https://github.com/rajat-33/NoteIt"
+                        target="_blank"
+                        className="mr-4 hover:text-[#0011FF]"
+                        title="Repository link"
+                      >
+                        <BsLink45Deg />
+                      </a>
                       NoteIt - Note Keeping Application
                     </div>
                     <div className="text-md">
@@ -443,8 +471,16 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="mt-16">
-                    <div className="text-xl text-[#00FF15] font-semibold">
+                    <div className="text-xl flex items-center text-[#00FF15] font-semibold">
                       Task Manager - Backend
+                      <a
+                        href="https://github.com/rajat-33/Task-Manager---Backend"
+                        target="_blank"
+                        className="ml-4 hover:text-[#0011FF]"
+                        title="Repository link"
+                      >
+                        <BsLink45Deg />
+                      </a>
                     </div>
                     <div className="text-md">NodeJS | Express | MongoDB </div>
                     <div className="text-md">
@@ -455,7 +491,15 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="text-end mt-16">
-                    <div className="text-xl text-[#00FF15] font-semibold">
+                    <div className="text-xl flex justify-end items-center text-[#00FF15] font-semibold">
+                      <a
+                        href="https://github.com/rajat-33/ResDec"
+                        target="_blank"
+                        className="mr-4 hover:text-[#0011FF]"
+                        title="Repository link"
+                      >
+                        <BsLink45Deg />
+                      </a>
                       ResDec - Resistor Decoder Application
                     </div>
                     <div className="text-md">React | CSS</div>
@@ -466,8 +510,16 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="my-16">
-                    <div className="text-xl text-[#00FF15] font-semibold">
+                    <div className="text-xl flex items-center text-[#00FF15] font-semibold">
                       TypeLit - Typing Practice Application
+                      <a
+                        href="https://github.com/rajat-33/TypeLit"
+                        target="_blank"
+                        className="ml-4 hover:text-[#0011FF]"
+                        title="Repository link"
+                      >
+                        <BsLink45Deg />
+                      </a>
                     </div>
                     <div className="text-md">JavaScript | HTML | CSS</div>
                     <div className="text-md">
