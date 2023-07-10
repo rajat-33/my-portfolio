@@ -92,97 +92,143 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col lg:flex-row w-screen scrollable-container overflow-y-auto lg:h-screen bg-gradient-to-b from-[#0B0B0B] to-[#323232] font-mono">
-        <div className="lg:hidden py-4 px-4 lg:px-0 flex lg:flex-col justify-between items-center fixed bg-black w-full">
-          <button
-            className="w-6 h-6 rounded-full border flex justify-center items-center"
-            onClick={() => {
-              handleScroll(homeRef);
-            }}
-          >
-            <IoIosArrowUp />
-          </button>
-          <div className="flex lg:flex-col px-1 w-full flex-wrap space-x-1 space-y-1 justify-center items-end">
+        <div className="lg:hidden flex flex-col fixed bg-black w-full">
+          <div className="py-4 px-4 lg:px-0 flex lg:flex-col justify-between items-center w-full">
             <button
-              className={
-                activeSection === 0
-                  ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
-                  : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
-              }
+              className="w-6 h-6 rounded-full border flex justify-center items-center"
               onClick={() => {
                 handleScroll(homeRef);
               }}
             >
-              Home
+              <IoIosArrowUp />
             </button>
+            <div className="flex lg:flex-col px-1 w-full flex-wrap space-x-1 space-y-1 justify-center items-end">
+              <button
+                className={
+                  activeSection === 0
+                    ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
+                    : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
+                }
+                onClick={() => {
+                  handleScroll(homeRef);
+                }}
+              >
+                Home
+              </button>
+              <button
+                className={
+                  activeSection === 1
+                    ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
+                    : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
+                }
+                onClick={() => {
+                  handleScroll(aboutRef);
+                }}
+              >
+                About
+              </button>
+              <button
+                className={
+                  activeSection === 2
+                    ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
+                    : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
+                }
+                onClick={() => {
+                  handleScroll(educationRef);
+                }}
+              >
+                Education
+              </button>
+              <button
+                className={
+                  activeSection === 3
+                    ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
+                    : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
+                }
+                onClick={() => {
+                  handleScroll(skillsRef);
+                }}
+              >
+                Skills
+              </button>
+              <button
+                className={
+                  activeSection === 4
+                    ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
+                    : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
+                }
+                onClick={() => {
+                  handleScroll(projectsRef);
+                }}
+              >
+                Projects
+              </button>
+              <button
+                className={
+                  activeSection === 5
+                    ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
+                    : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
+                }
+                onClick={() => {
+                  handleScroll(experienceRef);
+                }}
+              >
+                Experience
+              </button>
+            </div>
             <button
-              className={
-                activeSection === 1
-                  ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
-                  : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
-              }
+              className="w-6 h-6 rounded-full border flex justify-center items-center"
               onClick={() => {
-                handleScroll(aboutRef);
+                handleScroll(footerRef);
               }}
             >
-              About
-            </button>
-            <button
-              className={
-                activeSection === 2
-                  ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
-                  : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
-              }
-              onClick={() => {
-                handleScroll(educationRef);
-              }}
-            >
-              Education
-            </button>
-            <button
-              className={
-                activeSection === 3
-                  ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
-                  : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
-              }
-              onClick={() => {
-                handleScroll(skillsRef);
-              }}
-            >
-              Skills
-            </button>
-            <button
-              className={
-                activeSection === 4
-                  ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
-                  : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
-              }
-              onClick={() => {
-                handleScroll(projectsRef);
-              }}
-            >
-              Projects
-            </button>
-            <button
-              className={
-                activeSection === 5
-                  ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
-                  : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
-              }
-              onClick={() => {
-                handleScroll(experienceRef);
-              }}
-            >
-              Experience
+              <IoIosArrowDown />
             </button>
           </div>
-          <button
-            className="w-6 h-6 rounded-full border flex justify-center items-center"
-            onClick={() => {
-              handleScroll(footerRef);
-            }}
-          >
-            <IoIosArrowDown />
-          </button>
+          <div className="flex justify-between">
+            <span
+              className={
+                activeSection >= 0
+                  ? "w-1/6 border-b-[2px] border-[#00FF15]"
+                  : "w-1/6 border-b-[2px] border-black"
+              }
+            ></span>
+            <span
+              className={
+                activeSection >= 1
+                  ? "w-1/6 border-b-[2px] border-[#00FF15]"
+                  : "w-1/6 border-b-[2px] border-black"
+              }
+            ></span>
+            <span
+              className={
+                activeSection >= 2
+                  ? "w-1/6 border-b-[2px] border-[#00FF15]"
+                  : "w-1/6 border-b-[2px] border-black"
+              }
+            ></span>
+            <span
+              className={
+                activeSection >= 3
+                  ? "w-1/6 border-b-[2px] border-[#00FF15]"
+                  : "w-1/6 border-b-[2px] border-black"
+              }
+            ></span>
+            <span
+              className={
+                activeSection >= 4
+                  ? "w-1/6 border-b-[2px] border-[#00FF15]"
+                  : "w-1/6 border-b-[2px] border-black"
+              }
+            ></span>
+            <span
+              className={
+                activeSection >= 5
+                  ? "w-1/6 border-b-[2px] border-[#00FF15]"
+                  : "w-1/6 border-b-[2px] border-black"
+              }
+            ></span>
+          </div>
         </div>
         <div
           ref={homeRef}
