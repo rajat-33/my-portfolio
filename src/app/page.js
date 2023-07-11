@@ -332,40 +332,48 @@ export default function Home() {
                     <div className="text-xl text-[#00FF15] font-semibold">
                       Heritage Institute of Technology, Kolkata
                     </div>
-                    <div className="text-md">
-                      Maulana Abul Kalam Azad University of Technology (MAKAUT)
+                    <div className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
+                      <div>
+                        Maulana Abul Kalam Azad University of Technology
+                        (MAKAUT)
+                      </div>
+                      <div>
+                        Bachelor of Technology- Electronics & Communication
+                        Engineering
+                      </div>
+                      <div>DGPA: 8.32</div>
+                      <div>GRADE: A</div>
                     </div>
-                    <div className="text-md">
-                      Bachelor of Technology- Electronics & Communication
-                      Engineering
-                    </div>
-                    <div className="text-md">DGPA: 8.32</div>
-                    <div className="text-md">GRADE: A</div>
                   </div>
                   <div className="text-end">
                     <div className="text-xl text-[#00FF15]  font-semibold mt-2">
                       Shree Jain Vidyalaya, Kolkata
                     </div>
-                    <div className="text-md">
-                      West Bengal Council of Higher Secondary Education (WBCHSE)
+                    <div className="text-md pr-2 my-2 border-r-[0.1px] border-[#00FF15]">
+                      <div>
+                        West Bengal Council of Higher Secondary Education
+                        (WBCHSE)
+                      </div>
+                      <div>
+                        Higher Secondary - Physics, Chemistry, Maths & Computer
+                        Science
+                      </div>
+                      <div>PERCENTAGE: 86.2%</div>
+                      <div>GRADE: A+</div>
                     </div>
-                    <div className="text-md">
-                      Higher Secondary - Physics, Chemistry, Maths & Computer
-                      Science
-                    </div>
-                    <div className="text-md">PERCENTAGE: 86.2%</div>
-                    <div className="text-md">GRADE: A+</div>
                   </div>
                   <div className="">
                     <div className="text-xl text-[#00FF15] font-semibold mt-2">
                       Shree Jain Vidyalaya, Kolkata
                     </div>
-                    <div className="text-md">
-                      West Bengal Board of Secondary Education (WBBSE)
+                    <div className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
+                      <div>
+                        West Bengal Board of Secondary Education (WBBSE)
+                      </div>
+                      <div>Secondary Examination</div>
+                      <div>PERCENTAGE: 88.2%</div>
+                      <div>GRADE: A+</div>
                     </div>
-                    <div className="text-md">Secondary Examination</div>
-                    <div className="text-md">PERCENTAGE: 88.2%</div>
-                    <div className="text-md">GRADE: A+</div>
                   </div>
                 </div>
               </div>
@@ -479,15 +487,15 @@ export default function Home() {
                     <div className="text-md">
                       RNN | Keras | Sklearn | Pandas | Numpy | Librosa
                     </div>
-                    <div className="text-md">
-                      A group final year project. It can run to detect emotions
-                      for analysing audio files and detect the maximum
-                      probablity of emotion it resembles. The neural model is
-                      trained using RNN - long-short term memory (LSTM)
-                      technique.
-                    </div>
-                    <div className="text-md">
-                      Train Accuracy: 86.7% Test Accuracy: 66.7%{" "}
+                    <div className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
+                      <div>
+                        A group final year project. It can run to detect
+                        emotions for analysing audio files and detect the
+                        maximum probablity of emotion it resembles. The neural
+                        model is trained using RNN - long-short term memory
+                        (LSTM) technique.
+                      </div>
+                      <div>Train Accuracy: 86.7% Test Accuracy: 66.7% </div>
                     </div>
                   </div>
                   <div className="text-end mt-16">
@@ -505,7 +513,7 @@ export default function Home() {
                     <div className="text-md">
                       React | NodeJS | MongoDB | Express | Bootstrap
                     </div>
-                    <div className="text-md">
+                    <div className="text-md pr-2 my-2 border-r-[0.1px] border-[#00FF15]">
                       NoteIt is a MERN full-stack web application software.
                       Users can create, update, delete and read notes on the go.
                       Used MongoDB database to perform CRUD operations. Express
@@ -529,7 +537,7 @@ export default function Home() {
                       </a>
                     </div>
                     <div className="text-md">NodeJS | Express | MongoDB </div>
-                    <div className="text-md">
+                    <div className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       A task manager backend application. Implemented basic api
                       endpoints such as GET, POST, PATCH and DELETE. A user can
                       read, add, update and delete notes created. Used express
@@ -549,7 +557,7 @@ export default function Home() {
                       ResDec - Resistor Decoder Application
                     </div>
                     <div className="text-md">React | CSS</div>
-                    <div className="text-md">
+                    <div className="text-md pr-2 my-2 border-r-[0.1px] border-[#00FF15]">
                       Single page React application to decode the value of a
                       resistor. Conversion from resistor color code and value.
                       Fully responsive website.
@@ -568,7 +576,7 @@ export default function Home() {
                       </a>
                     </div>
                     <div className="text-md">JavaScript | HTML | CSS</div>
-                    <div className="text-md">
+                    <div className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       On Screen Keyboard indicating the typing letters.
                       Simultaneous error detection while typing. Accuracy
                       detection of typed words.
@@ -597,7 +605,7 @@ export default function Home() {
                     <div className="text-md">
                       NextJS | Bootstrap | Material UI | Git
                     </div>
-                    <div className="text-md">
+                    <div className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       Worked on Frontend - NextJS. Created web-pages from
                       scratch. Worked with integration of backend technologies -
                       Firebase. Learnt Poject Collaboration - Git.
@@ -607,36 +615,36 @@ export default function Home() {
                     <div className="text-xl text-[#00FF15] font-semibold mt-2">
                       Competitive Programming
                     </div>
-                    <div className="text-md">
+                    <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       C++ | Data Structures & Algorithms (DSA)
-                    </div>
-                    <div className="text-md">
+                    </p>
+                    <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       GeeksForGeeks - Solved 1000+ problems. Global rank under
-                      250
-                    </div>
-                    <div className="text-md">
+                      250.
+                    </p>
+                    <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       CodeChef - Highest rating 1810
-                    </div>
-                    <div className="text-md">
+                    </p>
+                    <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       HackerRank - Gold badges in problem solving & C++
-                    </div>
-                    <div className="text-md">
+                    </p>
+                    <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       TCS CodeVita 2022 - Global rank 56
-                    </div>
-                    <div className="text-md">
+                    </p>
+                    <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       Infosys HackWithInfy - Qualified for PPI
-                    </div>
+                    </p>
                   </div>
                   <div className="mt-16">
                     <div className="text-xl text-[#00FF15] font-semibold mt-2">
                       Volunteering
                     </div>
-                    <div className="my-2">
+                    <div className="my-2 pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       Developer Students Club (DSC HIT): Presented an online
                       youtube session "Programming Simplified" on programming
                       basics for beginners. 275+ views on video.
                     </div>
-                    <div className="my-2">
+                    <div className="my-2 pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       V-Force Volunteers — COVID-19 Virtual Campaigning Online
                       Created awareness about vaccination, COVID Appropriate
                       Behaviour via social media platform
