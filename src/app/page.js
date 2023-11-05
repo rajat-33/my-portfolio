@@ -619,14 +619,14 @@ export default function Home() {
                       C++ | Data Structures & Algorithms (DSA)
                     </p>
                     <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
-                      GeeksForGeeks - Solved 1000+ problems. Global rank under
+                      GeeksForGeeks - Solved 1050+ problems. Global rank under
                       250.
                     </p>
                     <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       CodeChef - Highest rating 1810
                     </p>
                     <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
-                      HackerRank - Gold badges in problem solving & C++
+                      HackerRank - Gold badgs in Problem Solving & C++
                     </p>
                     <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       TCS CodeVita 2022 - Global rank 56
@@ -642,7 +642,7 @@ export default function Home() {
                     <div className="my-2 pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       Developer Students Club (DSC HIT): Presented an online
                       youtube session "Programming Simplified" on programming
-                      basics for beginners. 275+ views on video.
+                      basics for beginners. 325+ views on video.
                     </div>
                     <div className="my-2 pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       V-Force Volunteers — COVID-19 Virtual Campaigning Online
