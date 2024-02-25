@@ -3,7 +3,34 @@ import { useRef, useState, useEffect } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { BsLink45Deg } from "react-icons/bs";
+import CarouselContainer from "../../CarouselElement";
 import "./scrollbar.css";
+import CarouselElement from "../../CarouselElement";
+
+const imageData = [
+  {
+    label: "Azure Data Engineer",
+    alt: "image1",
+    url: "https://lh5.googleusercontent.com/xo6zDzj4Mq8JTuh31DRdzWPkmeekU1ykdvy7gmdGNkBnVzHoULgCA_MpL1ybOV2GKEkbvmswUl0iQW0lvnNQe3gqOFi_-bbt3MBzOAla29FvVN753jPZS87Bn7HyXoQ-dwA-ioYg",
+  },
+  {
+    label: "Web Developer",
+    alt: "image2",
+    url: "https://cdn.thomasnet.com/insights-images/eaf2ea91-c0ca-488d-ab63-af480b6f78cb/750px.png",
+  },
+  {
+    label: "Competitive Programmer",
+    alt: "image3",
+    url: "https://moneyinc.com/wp-content/uploads/2018/11/Willow-750x500.jpg",
+  },
+];
+
+const renderSlides = imageData.map((image) => (
+  <div key={image.alt}>
+    <img src={image.url} alt={image.alt} />
+    <p className="legend">{image.label}</p>
+  </div>
+));
 
 export default function Home() {
   const aboutMeHeading = "<About Me />";
@@ -30,7 +57,13 @@ export default function Home() {
     ".py",
     ".p",
   ];
+  const carouselArray = [
+    "Azure Data Engineer",
+    "Web Developer",
+    "Competitive Programmer",
+  ];
   const [animationArrayIndex, setAnimationArrayIndex] = useState(0);
+  const [carouselArrayIndex, setCarouselArrayIndex] = useState(0);
   const [activeSection, setActiveSection] = useState(null);
   const sections = [
     "home",
@@ -58,6 +91,10 @@ export default function Home() {
   setTimeout(() => {
     setAnimationArrayIndex((animationArrayIndex + 1) % animationArray.length);
   }, 500);
+
+  setTimeout(() => {
+    setCarouselArrayIndex((carouselArrayIndex + 1) % 4);
+  }, 3000);
 
   const handleSectionVisibility = (index, inView) => {
     if (inView) {
@@ -234,14 +271,34 @@ export default function Home() {
           ref={homeRef}
           className="w-full py-8 lg:py-0 h-screen lg:h-auto lg:w-1/3 flex flex-col"
         >
-          <div className="h-1/4 flex justify-center items-end"></div>
-
+          {carouselArrayIndex}
+          <div
+            className={`flex w-screen lg:w-[30em] overflow-x-hidden border h-1/3 items-end py-4`}
+          >
+            <div
+              className={
+                carouselArrayIndex == 0
+                  ? `flex w-[300%] -translate-x-[0%] transition ease-in-out`
+                  : carouselArrayIndex == 1 || carouselArrayIndex == 3
+                  ? `flex w-[300%] -translate-x-[33%] transition ease-in-out`
+                  : `flex w-[300%] -translate-x-[67%] transition ease-in-out`
+              }
+            >
+              {carouselArray.map((ele, ind) => {
+                return (
+                  <span className="text-lg   text-center w-screen lg:w-[30em]">
+                    {ele}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
           <div
             key="home"
             ref={sectionRefs[0]}
             className="h-1/2 flex flex-col justify-center items-center border-b"
           >
-            <div className="imgContainer h-48 w-48 lg:h-64 lg:w-64 border-2 border-[#00FF15] rounded-3xl"></div>
+            <div className="imgContainer h-48 w-48 lg:h-64 lg:w-64 rounded-xl"></div>
             <p className="flex flex-col lg:flex-row justify-center lg:items-end items-center w-full mt-4 ">
               <span className="text-3xl font-semibold">Rajat Agarwal</span>
               <span className="text-3xl text-[#00FF15] italic">
