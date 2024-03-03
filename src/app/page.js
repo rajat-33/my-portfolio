@@ -39,7 +39,26 @@ export default function Home() {
   const projectsHeading = "<Projects />";
   const experienceHeading = "<Experience />";
   const aboutMeContent =
-    "I'm an enthusiastic learner, dedicated coder, and proficient full stack MERN developer. My expertise lies in crafting code logics to solve complex problems. I have to contributed to and helped built some  high quality React.js projects, showcasing a commitment to excellence. During my internship, I made substantial contributions to the front-end development of a web application, amplifying its user experience. Beyond my mastery in MERN, I possess valuable experience in NEXT.js, TypeScript, Machine Learning, and actively engage in competitive programming. With a track record of solving over 1500+ problems on coding platforms like GeeksForGeeks, Codechef, and HackerRank, I continually refine my problem-solving skills.";
+    "I'm an enthusiastic learner, dedicated coder, and proficient full stack MERN developer. My expertise lies in crafting code logics to solve complex problems. With a track record of solving over 1500+ problems on coding platforms like GeeksForGeeks, Codechef, and HackerRank, I continually refine my problem-solving skills.";
+
+  const azureDataEngSkillsArray = [
+    "Azure Data Factory",
+    "Azure Databricks",
+    "SQL",
+  ];
+  const webDevSkillsArray = [
+    "ReactJS",
+    "NextJS",
+    "NodeJS",
+    "MongoDB",
+    "Express",
+    "JavaScript",
+    "TypeScript",
+    "Tailwind",
+    "React Redux",
+    "Postman",
+  ];
+  const compiProgSkillsArray = ["C++", "Data Structure", "Algorithms"];
 
   const animationArray = [
     ".",
@@ -271,7 +290,6 @@ export default function Home() {
           ref={homeRef}
           className="w-full py-8 lg:py-0 h-screen lg:h-auto lg:w-1/3 flex flex-col"
         >
-          {carouselArrayIndex}
           <div
             className={`flex w-screen lg:w-[30em] overflow-x-hidden border h-1/3 items-end py-4`}
           >
@@ -286,7 +304,10 @@ export default function Home() {
             >
               {carouselArray.map((ele, ind) => {
                 return (
-                  <span className="text-lg   text-center w-screen lg:w-[30em]">
+                  <span
+                    id={ind}
+                    className="text-lg lg:text-xl text-center w-screen lg:w-[30em]"
+                  >
                     {ele}
                   </span>
                 );
@@ -444,73 +465,114 @@ export default function Home() {
                 <div className="text-4xl lg:text-5xl mb-12 text-center">
                   {skillsHeading}
                 </div>
-                <div className="flex flex-col text-md lg:text-xl w-2/3">
-                  <div className="my-2 border-b">
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      ReactJS
+                <div className="flex flex-col  lg:w-2/3">
+                  <div>
+                    <p className="text-lg lg:text-xl text-[#00FF15]">
+                      Azure Data Engineer
+                    </p>
+                    <div className="my-2 flex flex-wrap w-full">
+                      {azureDataEngSkillsArray.map((ele, ind) => (
+                        <div
+                          className="min-w-1/2 text-xs lg:text-sm border
+                       border-[#00FF15] m-1 pl-2 pr-4 rounded-md text-[#00FF15] cursor-default flex items-center justify-between group"
+                          key={ind}
+                        >
+                          <div
+                            className="w-1 h-1 border mr-1 border border-transparent
+                       group-hover:border-[#00FF15] group-hover:bg-[#00FF15] rounded"
+                          ></div>
+                          {ele}
+                        </div>
+                      ))}
                     </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      NextJS
-                    </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      NodeJS
-                    </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      MongoDB
-                    </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      Express
-                    </div>
-                  </div>
-                  <div className="my-2 border-b">
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      JavaScript
-                    </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      TypeScript
-                    </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      C
-                    </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      C++
-                    </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      Python
-                    </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      Java
+                    <div className="my-2 lg:my-4">
+                      <p>
+                        &#9733; Azure Data Engineer - Tata Consultancy Services,
+                        Kolkata
+                      </p>
+                      <p className="text-end text-xs text-[#FFFB84]">
+                        (Aug 2023 - Present)
+                      </p>
+                      <p className="text-xs lg:text-sm">
+                        Perform Extract, Transform and Load (ETL) to create
+                        pipelines and workflows using Azure Data Factory (ADF).
+                        Used Azure Databricks and SQL for Data Analysis. Used
+                        Logic Apps to implement automated alert emails.
+                      </p>
                     </div>
                   </div>
-                  <div className="my-2 border-b">
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      Postman
+                  <div>
+                    <p className="text-lg lg:text-xl text-[#00FF15]">
+                      Web Developer
+                    </p>
+                    <div className="my-2 flex flex-wrap w-full">
+                      {webDevSkillsArray.map((ele, ind) => (
+                        <div
+                          className="min-w-1/2 text-xs lg:text-sm border
+                       border-[#00FF15] m-1 pl-2 pr-4 rounded-md text-[#00FF15] cursor-default flex items-center justify-between group"
+                          key={ind}
+                        >
+                          <div
+                            className="w-1 h-1 border mr-1 border border-transparent
+                       group-hover:border-[#00FF15] group-hover:bg-[#00FF15] rounded"
+                          ></div>
+                          {ele}
+                        </div>
+                      ))}
                     </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      Tailwind
+                    <div className="my-2 lg:my-4">
+                      <p>&#9733; Web Developer Freelancer</p>
+                      <p className="text-end text-xs text-[#FFFB84]">
+                        (Dec 2022 - June 2023)
+                      </p>
+                      <p className="text-xs lg:text-sm">
+                        Contributed and collaborated in building a web-app from
+                        scratch. Implemented modal, pagination, loader, state
+                        management, most recent visited page scrolling & used
+                        optimization techniques like lazy loading, Redux,
+                        Socket.IO.
+                      </p>
                     </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      Bootstrap
-                    </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      React Redux
+                    <div className="my-2 lg:my-4">
+                      <p>&#9733; Web Developer Intern - Vedasis Analytics</p>
+                      <p className="text-end text-xs text-[#FFFB84]">
+                        (Oct 2022 - Nov 2022)
+                      </p>
+                      <p className="text-xs lg:text-sm">
+                        Worked on Frontend - NextJS. Used Hooks and Redux to
+                        create web components. Learnt Poject Collaboration with
+                        Git.
+                      </p>
                     </div>
                   </div>
-                  <div className="my-2">
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      Data Structures
+                  <div>
+                    <p className="text-lg lg:text-xl text-[#00FF15]">
+                      Competitive Programmer
+                    </p>
+                    <div className="my-2 flex flex-wrap w-full">
+                      {compiProgSkillsArray.map((ele, ind) => (
+                        <div
+                          className="min-w-1/2 text-xs lg:text-sm border
+                       border-[#00FF15] m-1 pl-2 pr-4 rounded-md text-[#00FF15] cursor-default flex items-center justify-between group"
+                          key={ind}
+                        >
+                          <div
+                            className="w-1 h-1 border mr-1 border border-transparent
+                       group-hover:border-[#00FF15] group-hover:bg-[#00FF15] rounded"
+                          ></div>
+                          {ele}
+                        </div>
+                      ))}
                     </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      Algorithms
-                    </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      OOPs
-                    </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      DBMS
-                    </div>
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      OS
+                    <div className="my-2 lg:my-4">
+                      <p>&#9733; GeeksForGeeks practice</p>
+                      <p className="text-end text-xs text-[#FFFB84]">
+                        (Nov 2020 - Present)
+                      </p>
+                      <p className="text-xs lg:text-sm">
+                        Solved 1075+ problems on various DSA problems. Overall
+                        rank below 1000 and institute rank - 3
+                      </p>
                     </div>
                   </div>
                 </div>
