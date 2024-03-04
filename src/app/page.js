@@ -57,6 +57,9 @@ export default function Home() {
   const compiProgSkillsArray = ["C++", "Data Structure", "Algorithms"];
 
   const animationArray = [
+    ".p",
+    ".py",
+    ".p",
     ".",
     ".j",
     ".js",
@@ -68,9 +71,12 @@ export default function Home() {
     ".cp",
     ".c",
     ".",
-    ".p",
-    ".py",
-    ".p",
+    ".j",
+    ".js",
+    ".j",
+    ".",
+    ".",
+    ".",
   ];
   const carouselArray = [
     "< Azure Data Engineer />",
@@ -101,7 +107,7 @@ export default function Home() {
 
   setTimeout(() => {
     setCarouselArrayIndex((carouselArrayIndex + 1) % 4);
-  }, 3000);
+  }, 2400);
 
   const handleSectionVisibility = (index, inView) => {
     if (inView) {
