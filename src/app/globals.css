@@ -43,6 +43,20 @@ body {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
+.az900imgContainer {
+  background-image: url("../../assets/az900.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.dp900imgContainer {
+  background-image: url("../../assets/dp900.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
 
 .gfgContainer {
   background-image: url("https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"); /* The image used */
@@ -53,7 +67,7 @@ body {
 }
 
 .codechefContainer {
-  background-image: url("https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/zruiknbedz8yqafxbazb"); /* The image used */
+  background-image: url("https://avatars.githubusercontent.com/u/11960354?v=4"); /* The image used */
   background-color: #ffffff; /* Used if the image is unavailable */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */

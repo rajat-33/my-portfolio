@@ -6,6 +6,8 @@ import { BsLink45Deg } from "react-icons/bs";
 import CarouselContainer from "../../CarouselElement";
 import "./scrollbar.css";
 import CarouselElement from "../../CarouselElement";
+import az900Pic from "../../assets/az900.png";
+import dp900Pic from "../../assets/dp900.png";
 
 const imageData = [
   {
@@ -25,26 +27,20 @@ const imageData = [
   },
 ];
 
-const renderSlides = imageData.map((image) => (
-  <div key={image.alt}>
-    <img src={image.url} alt={image.alt} />
-    <p className="legend">{image.label}</p>
-  </div>
-));
-
 export default function Home() {
   const aboutMeHeading = "<About Me />";
   const educationHeading = "<Education />";
   const skillsHeading = "<Skills />";
   const projectsHeading = "<Projects />";
-  const experienceHeading = "<Experience />";
   const aboutMeContent =
-    "I'm an enthusiastic learner, dedicated coder, and proficient full stack MERN developer. My expertise lies in crafting code logics to solve complex problems. With a track record of solving over 1500+ problems on coding platforms like GeeksForGeeks, Codechef, and HackerRank, I continually refine my problem-solving skills.";
+    "I'm an enthusiastic learner, dedicated coder, and proficient full stack MERN developer. My expertise lies in crafting code logics to solve complex problems. With a track record of solving over 1500+ problems on coding platforms like GeeksForGeeks, Codechef and HackerRank, I continually refine my problem-solving skills. Currently I'm employed as an Azure Data Engineer at Tata Consultancy Services, Kolkata";
 
   const azureDataEngSkillsArray = [
     "Azure Data Factory",
     "Azure Databricks",
     "SQL",
+    "Python",
+    "ETL",
   ];
   const webDevSkillsArray = [
     "ReactJS",
@@ -77,28 +73,20 @@ export default function Home() {
     ".p",
   ];
   const carouselArray = [
-    "Azure Data Engineer",
-    "Web Developer",
-    "Competitive Programmer",
+    "< Azure Data Engineer />",
+    "< Web Developer />",
+    "< Competitive Programmer />",
   ];
   const [animationArrayIndex, setAnimationArrayIndex] = useState(0);
   const [carouselArrayIndex, setCarouselArrayIndex] = useState(0);
   const [activeSection, setActiveSection] = useState(null);
-  const sections = [
-    "home",
-    "about",
-    "education",
-    "skills",
-    "projects",
-    "experience",
-  ];
+  const sections = ["home", "about", "education", "skills", "projects"];
   const sectionRefs = sections.map(() => useRef(null));
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const educationRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
-  const experienceRef = useRef(null);
   const headerRef = useRef(null);
   const footerRef = useRef(null);
 
@@ -219,18 +207,6 @@ export default function Home() {
               >
                 Projects
               </button>
-              <button
-                className={
-                  activeSection === 5
-                    ? "border-y-[0.5px] rounded flex text-[#00FF15] hover:bg-[#073A00]"
-                    : "border-y-[0.5px] rounded flex hover:bg-[#073A00]"
-                }
-                onClick={() => {
-                  handleScroll(experienceRef);
-                }}
-              >
-                Experience
-              </button>
             </div>
             <button
               className="w-6 h-6 rounded-full border flex justify-center items-center"
@@ -245,43 +221,36 @@ export default function Home() {
             <span
               className={
                 activeSection >= 0
-                  ? "w-1/6 border-b-[2px] border-[#00FF15]"
-                  : "w-1/6 border-b-[2px] border-black"
+                  ? "w-1/5 border-b-[2px] border-[#00FF15]"
+                  : "w-1/5 border-b-[2px] border-black"
               }
             ></span>
             <span
               className={
                 activeSection >= 1
-                  ? "w-1/6 border-b-[2px] border-[#00FF15]"
-                  : "w-1/6 border-b-[2px] border-black"
+                  ? "w-1/5 border-b-[2px] border-[#00FF15]"
+                  : "w-1/5 border-b-[2px] border-black"
               }
             ></span>
             <span
               className={
                 activeSection >= 2
-                  ? "w-1/6 border-b-[2px] border-[#00FF15]"
-                  : "w-1/6 border-b-[2px] border-black"
+                  ? "w-1/5 border-b-[2px] border-[#00FF15]"
+                  : "w-1/5 border-b-[2px] border-black"
               }
             ></span>
             <span
               className={
                 activeSection >= 3
-                  ? "w-1/6 border-b-[2px] border-[#00FF15]"
-                  : "w-1/6 border-b-[2px] border-black"
+                  ? "w-1/5 border-b-[2px] border-[#00FF15]"
+                  : "w-1/5 border-b-[2px] border-black"
               }
             ></span>
             <span
               className={
                 activeSection >= 4
-                  ? "w-1/6 border-b-[2px] border-[#00FF15]"
-                  : "w-1/6 border-b-[2px] border-black"
-              }
-            ></span>
-            <span
-              className={
-                activeSection >= 5
-                  ? "w-1/6 border-b-[2px] border-[#00FF15]"
-                  : "w-1/6 border-b-[2px] border-black"
+                  ? "w-1/5 border-b-[2px] border-[#00FF15]"
+                  : "w-1/5 border-b-[2px] border-black"
               }
             ></span>
           </div>
@@ -290,34 +259,34 @@ export default function Home() {
           ref={homeRef}
           className="w-full py-8 lg:py-0 h-screen lg:h-auto lg:w-1/3 flex flex-col"
         >
-          <div
-            className={`flex w-screen lg:w-[30em] overflow-x-hidden border h-1/3 items-end py-4`}
-          >
-            <div
-              className={
-                carouselArrayIndex == 0
-                  ? `flex w-[300%] -translate-x-[0%] transition ease-in-out`
-                  : carouselArrayIndex == 1 || carouselArrayIndex == 3
-                  ? `flex w-[300%] -translate-x-[33%] transition ease-in-out`
-                  : `flex w-[300%] -translate-x-[67%] transition ease-in-out`
-              }
-            >
-              {carouselArray.map((ele, ind) => {
-                return (
-                  <span
-                    id={ind}
-                    className="text-lg lg:text-xl text-center w-screen lg:w-[30em]"
-                  >
-                    {ele}
-                  </span>
-                );
-              })}
+          <div className="flex justify-center h-1/3">
+            <div className="flex w-screen lg:w-[22em] overflow-x-hidden items-end py-4">
+              <div
+                className={
+                  carouselArrayIndex == 0
+                    ? `flex w-[300%] -translate-x-[0%] transition ease-in-out`
+                    : carouselArrayIndex == 1 || carouselArrayIndex == 3
+                    ? `flex w-[300%] -translate-x-[33%] transition ease-in-out`
+                    : `flex w-[300%] -translate-x-[67%] transition ease-in-out`
+                }
+              >
+                {carouselArray.map((ele, ind) => {
+                  return (
+                    <span
+                      id={ind}
+                      className="text-lg lg:text-xl text-center w-screen lg:w-[20em]"
+                    >
+                      {ele}
+                    </span>
+                  );
+                })}
+              </div>
             </div>
           </div>
           <div
             key="home"
             ref={sectionRefs[0]}
-            className="h-1/2 flex flex-col justify-center items-center border-b"
+            className="h-1/2 flex flex-col justify-center items-center"
           >
             <div className="imgContainer h-48 w-48 lg:h-64 lg:w-64 rounded-xl"></div>
             <p className="flex flex-col lg:flex-row justify-center lg:items-end items-center w-full mt-4 ">
@@ -328,7 +297,7 @@ export default function Home() {
             </p>
           </div>
           <div className="h-1/4 flex justify-center">
-            <div className="w-full lg:w-2/3 flex justify-around py-4">
+            <div className="w-full flex justify-around py-4 border-t">
               <a
                 href="mailto:agarwalrajat1503@gmail.com"
                 target="_blank"
@@ -410,7 +379,7 @@ export default function Home() {
                     <div className="text-xl text-[#00FF15] font-semibold">
                       Heritage Institute of Technology, Kolkata
                     </div>
-                    <div className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
+                    <div className="text-sm pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       <div>
                         Maulana Abul Kalam Azad University of Technology
                         (MAKAUT)
@@ -427,7 +396,7 @@ export default function Home() {
                     <div className="text-xl text-[#00FF15]  font-semibold mt-2">
                       Shree Jain Vidyalaya, Kolkata
                     </div>
-                    <div className="text-md pr-2 my-2 border-r-[0.1px] border-[#00FF15]">
+                    <div className="text-sm pr-2 my-2 border-r-[0.1px] border-[#00FF15]">
                       <div>
                         West Bengal Council of Higher Secondary Education
                         (WBCHSE)
@@ -444,7 +413,7 @@ export default function Home() {
                     <div className="text-xl text-[#00FF15] font-semibold mt-2">
                       Shree Jain Vidyalaya, Kolkata
                     </div>
-                    <div className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
+                    <div className="text-sm pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       <div>
                         West Bengal Board of Secondary Education (WBBSE)
                       </div>
@@ -465,25 +434,39 @@ export default function Home() {
                 <div className="text-4xl lg:text-5xl mb-12 text-center">
                   {skillsHeading}
                 </div>
-                <div className="flex flex-col  lg:w-2/3">
-                  <div>
-                    <p className="text-lg lg:text-xl text-[#00FF15]">
+                <div className="flex flex-col  lg:w-3/4">
+                  <div className="my-4 py-2 hover:border-y group">
+                    <p className="text-xl text-[#00FF15] text-center">
                       Azure Data Engineer
                     </p>
                     <div className="my-2 flex flex-wrap w-full">
                       {azureDataEngSkillsArray.map((ele, ind) => (
                         <div
                           className="min-w-1/2 text-xs lg:text-sm border
-                       border-[#00FF15] m-1 pl-2 pr-4 rounded-md text-[#00FF15] cursor-default flex items-center justify-between group"
+                       border-[#00FF15] m-1 pl-2 pr-4 rounded-md text-[#00FF15] cursor-default flex items-center justify-between"
                           key={ind}
                         >
                           <div
                             className="w-1 h-1 border mr-1 border border-transparent
-                       group-hover:border-[#00FF15] group-hover:bg-[#00FF15] rounded"
+                       group-hover:border-[#9FFF32] group-hover:bg-[#9FFF32] rounded"
                           ></div>
                           {ele}
                         </div>
                       ))}
+                    </div>
+                    <div className="lg:w-1/3 my-2 flex flex-wrap w-full justify-around ">
+                      <a
+                        className="az900imgContainer h-24 w-20 border rounded"
+                        href="https://learn.microsoft.com/api/credentials/share/en-gb/RajatAgarwal-8439/B43C054B545F2C6F?sharingId=24DF3EF74ED51F41"
+                        target="_blank"
+                        title="az900 credential"
+                      ></a>
+                      <a
+                        className="dp900imgContainer h-24 w-20 border rounded"
+                        href="https://learn.microsoft.com/api/credentials/share/en-gb/RajatAgarwal-8439/807B6709A021BBD6?sharingId=24DF3EF74ED51F41"
+                        target="_blank"
+                        title="dp900 credential"
+                      ></a>
                     </div>
                     <div className="my-2 lg:my-4">
                       <p>
@@ -501,20 +484,20 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <p className="text-lg lg:text-xl text-[#00FF15]">
+                  <div className="my-4 py-2 hover:border-y group">
+                    <p className="text-xl text-[#00FF15] text-center">
                       Web Developer
                     </p>
-                    <div className="my-2 flex flex-wrap w-full">
+                    <div className="my-2 flex flex-wrap w-full ">
                       {webDevSkillsArray.map((ele, ind) => (
                         <div
                           className="min-w-1/2 text-xs lg:text-sm border
-                       border-[#00FF15] m-1 pl-2 pr-4 rounded-md text-[#00FF15] cursor-default flex items-center justify-between group"
+                       border-[#00FF15] m-1 pl-2 pr-4 rounded-md text-[#00FF15] cursor-default flex items-center justify-between "
                           key={ind}
                         >
                           <div
                             className="w-1 h-1 border mr-1 border border-transparent
-                       group-hover:border-[#00FF15] group-hover:bg-[#00FF15] rounded"
+                       group-hover:border-[#9FFF32] group-hover:bg-[#9FFF32] rounded"
                           ></div>
                           {ele}
                         </div>
@@ -545,20 +528,20 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <p className="text-lg lg:text-xl text-[#00FF15]">
+                  <div className="my-4 py-2 hover:border-y group">
+                    <p className="text-xl text-[#00FF15] text-center">
                       Competitive Programmer
                     </p>
                     <div className="my-2 flex flex-wrap w-full">
                       {compiProgSkillsArray.map((ele, ind) => (
                         <div
                           className="min-w-1/2 text-xs lg:text-sm border
-                       border-[#00FF15] m-1 pl-2 pr-4 rounded-md text-[#00FF15] cursor-default flex items-center justify-between group"
+                       border-[#00FF15] m-1 pl-2 pr-4 rounded-md text-[#00FF15] cursor-default flex items-center justify-between"
                           key={ind}
                         >
                           <div
                             className="w-1 h-1 border mr-1 border border-transparent
-                       group-hover:border-[#00FF15] group-hover:bg-[#00FF15] rounded"
+                       group-hover:border-[#9FFF32] group-hover:bg-[#9FFF32] rounded"
                           ></div>
                           {ele}
                         </div>
@@ -571,9 +554,21 @@ export default function Home() {
                       </p>
                       <p className="text-xs lg:text-sm">
                         Solved 1075+ problems on various DSA problems. Overall
-                        rank below 1000 and institute rank - 3
+                        rank below 600 and institute rank - 3
                       </p>
                     </div>
+                    <p className="text-sm">
+                      &#9734; TCS CodeVita 2022 - Global rank 56
+                    </p>
+                    <p className="text-sm">
+                      &#9734; CodeChef - Highest rating 1810
+                    </p>
+                    <p className="text-sm">
+                      &#9734; HackerRank - Gold badges in problem solving & C++
+                    </p>
+                    <p className="text-sm">
+                      &#9734; Infosys HackWithInfy - Qualified for PPI
+                    </p>
                   </div>
                 </div>
               </div>
@@ -603,10 +598,10 @@ export default function Home() {
                         <BsLink45Deg />
                       </a>
                     </div>
-                    <div className="text-md">
+                    <div className="text-sm">
                       RNN | Keras | Sklearn | Pandas | Numpy | Librosa
                     </div>
-                    <div className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
+                    <div className="text-sm pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       <div>
                         A group final year project. It can run to detect
                         emotions for analysing audio files and detect the
@@ -617,7 +612,7 @@ export default function Home() {
                       <div>Train Accuracy: 86.7% Test Accuracy: 66.7% </div>
                     </div>
                   </div>
-                  <div className="text-end mt-16">
+                  <div className="text-end mt-8">
                     <div className="text-xl flex items-center justify-end text-[#00FF15] font-semibold">
                       <a
                         href="https://github.com/rajat-33/NoteIt"
@@ -629,10 +624,10 @@ export default function Home() {
                       </a>
                       NoteIt - Note Keeping Application
                     </div>
-                    <div className="text-md">
+                    <div className="text-sm">
                       React | NodeJS | MongoDB | Express | Bootstrap
                     </div>
-                    <div className="text-md pr-2 my-2 border-r-[0.1px] border-[#00FF15]">
+                    <div className="text-sm pr-2 my-2 border-r-[0.1px] border-[#00FF15]">
                       NoteIt is a MERN full-stack web application software.
                       Users can create, update, delete and read notes on the go.
                       Used MongoDB database to perform CRUD operations. Express
@@ -643,7 +638,7 @@ export default function Home() {
                       and encrypted.
                     </div>
                   </div>
-                  <div className="mt-16">
+                  <div className="mt-8">
                     <div className="text-xl flex items-center text-[#00FF15] font-semibold">
                       Task Manager - Backend
                       <a
@@ -655,15 +650,15 @@ export default function Home() {
                         <BsLink45Deg />
                       </a>
                     </div>
-                    <div className="text-md">NodeJS | Express | MongoDB </div>
-                    <div className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
+                    <div className="text-sm">NodeJS | Express | MongoDB </div>
+                    <div className="text-sm pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       A task manager backend application. Implemented basic api
                       endpoints such as GET, POST, PATCH and DELETE. A user can
                       read, add, update and delete notes created. Used express
                       for managing routes and MongoDB Atlas as database.
                     </div>
                   </div>
-                  <div className="text-end mt-16">
+                  <div className="text-end mt-8">
                     <div className="text-xl flex justify-end items-center text-[#00FF15] font-semibold">
                       <a
                         href="https://github.com/rajat-33/ResDec"
@@ -675,14 +670,14 @@ export default function Home() {
                       </a>
                       ResDec - Resistor Decoder Application
                     </div>
-                    <div className="text-md">React | CSS</div>
-                    <div className="text-md pr-2 my-2 border-r-[0.1px] border-[#00FF15]">
+                    <div className="text-sm">React | CSS</div>
+                    <div className="text-sm pr-2 my-2 border-r-[0.1px] border-[#00FF15]">
                       Single page React application to decode the value of a
                       resistor. Conversion from resistor color code and value.
                       Fully responsive website.
                     </div>
                   </div>
-                  <div className="my-16">
+                  <div className="my-8">
                     <div className="text-xl flex items-center text-[#00FF15] font-semibold">
                       TypeLit - Typing Practice Application
                       <a
@@ -694,79 +689,11 @@ export default function Home() {
                         <BsLink45Deg />
                       </a>
                     </div>
-                    <div className="text-md">JavaScript | HTML | CSS</div>
-                    <div className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
+                    <div className="text-sm">JavaScript | HTML | CSS</div>
+                    <div className="text-sm pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
                       On Screen Keyboard indicating the typing letters.
                       Simultaneous error detection while typing. Accuracy
                       detection of typed words.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              ref={experienceRef}
-              className="flex justify-center items-center min-h-screen border-t-2 py-8"
-            >
-              <div
-                key="experience"
-                ref={sectionRefs[5]}
-                className="flex flex-col w-full items-center"
-              >
-                <div className="text-4xl lg:text-5xl mb-12 text-center">
-                  {experienceHeading}
-                </div>
-                <div className="flex flex-col text-md lg:text-xl w-full px-4">
-                  <div className="">
-                    <div className="text-xl text-[#00FF15] font-semibold">
-                      Web Developer Intern - Vedasis Analytics
-                    </div>
-                    <div className="text-md">
-                      NextJS | Bootstrap | Material UI | Git
-                    </div>
-                    <div className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
-                      Worked on Frontend - NextJS. Created web-pages from
-                      scratch. Worked with integration of backend technologies -
-                      Firebase. Learnt Poject Collaboration - Git.
-                    </div>
-                  </div>
-                  <div className="mt-16">
-                    <div className="text-xl text-[#00FF15] font-semibold mt-2">
-                      Competitive Programming
-                    </div>
-                    <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
-                      C++ | Data Structures & Algorithms (DSA)
-                    </p>
-                    <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
-                      GeeksForGeeks - Solved 1000+ problems. Global rank under
-                      250.
-                    </p>
-                    <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
-                      CodeChef - Highest rating 1810
-                    </p>
-                    <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
-                      HackerRank - Gold badges in problem solving & C++
-                    </p>
-                    <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
-                      TCS CodeVita 2022 - Global rank 56
-                    </p>
-                    <p className="text-md pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
-                      Infosys HackWithInfy - Qualified for PPI
-                    </p>
-                  </div>
-                  <div className="mt-16">
-                    <div className="text-xl text-[#00FF15] font-semibold mt-2">
-                      Volunteering
-                    </div>
-                    <div className="my-2 pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
-                      Developer Students Club (DSC HIT): Presented an online
-                      youtube session "Programming Simplified" on programming
-                      basics for beginners. 275+ views on video.
-                    </div>
-                    <div className="my-2 pl-2 my-2 border-l-[0.1px] border-[#00FF15]">
-                      V-Force Volunteers — COVID-19 Virtual Campaigning Online
-                      Created awareness about vaccination, COVID Appropriate
-                      Behaviour via social media platform
                     </div>
                   </div>
                 </div>
@@ -843,21 +770,6 @@ export default function Home() {
                 }}
               >
                 Projects
-              </button>
-              <button
-                id="experienceBtn"
-                className={
-                  activeSection > 5
-                    ? "flex px-2 py-2 border-l-[3px] border-[#00FF15] hover:text-[#C7FFBF]"
-                    : activeSection === 5
-                    ? "flex px-2 py-2 text-[#00FF15] border-l-[3px] border-[#00FF15]"
-                    : "flex px-2 py-2 border-l-[3px] hover:text-[#C7FFBF]"
-                }
-                onClick={() => {
-                  handleScroll(experienceRef);
-                }}
-              >
-                Experience
               </button>
             </div>
             <button
