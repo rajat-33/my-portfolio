@@ -266,7 +266,7 @@ export default function Home() {
           className="w-full py-8 lg:py-0 h-screen lg:h-auto lg:w-1/3 flex flex-col"
         >
           <div className="flex justify-center h-1/3">
-            <div className="flex w-screen lg:w-[22em] overflow-x-hidden items-end py-4">
+            <div className="flex w-screen lg:w-[22em] overflow-x-hidden items-end py-4 ">
               <div
                 className={
                   carouselArrayIndex == 0
@@ -281,6 +281,9 @@ export default function Home() {
                     <span
                       id={ind}
                       className="text-lg lg:text-xl text-center w-screen lg:w-[20em]"
+                      onClick={() => {
+                        handleScroll(skillsRef);
+                      }}
                     >
                       {ele}
                     </span>
